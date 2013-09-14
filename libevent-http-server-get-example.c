@@ -33,7 +33,7 @@ void testing (struct evhttp_request *request, void *privParams) {
 
 	// Add a HTTP header, an application/json for the content type here
 	evhttp_add_header (evhttp_request_get_output_headers (request),
-			"Content-Type", "application/json");
+			"Content-Type", "text/plain");
 
 	// Tell we're done and data should be sent back
 	evhttp_send_reply(request, HTTP_OK, "OK", buffer);
